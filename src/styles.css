@@ -1,3 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import "tailwindcss";
+
+@font-face {
+    font-family: "Gajraj One";
+    font-weight: normal;
+    font-style: normal;
+    src: url("app/assets/fonts/GajrajOne-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "RobotoSerif";
+    font-weight: 400;
+    font-style: normal;
+    src: url("app/assets/fonts/RobotoSerif-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "RobotoSerif";
+    font-weight: 600;
+    font-style: normal;
+    src: url("app/assets/fonts/RobotoSerif-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "RobotoSerif";
+    font-weight: 700;
+    font-style: normal;
+    src: url("app/assets/fonts/RobotoSerif-Bold.ttf") format("truetype");
+}
+
+@theme {
+    --font-gajraj: "Gajraj One", sans-serif;
+    --font-roboto-serif: "RobotoSerif", serif;
+
+    --color-primary: #4B9DA9;
+    --color-secondary: #E37434;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-roboto-serif);
+    background-color: #FAF8F1;
+    color: #000000;
+}
