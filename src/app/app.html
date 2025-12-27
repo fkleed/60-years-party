@@ -1,8 +1,10 @@
-<app-header />
-<main class="main">
-  <div class="content">
-    Main
-  </div>
-</main>
-<router-outlet />
-<app-footer />
+<div class="app-root">
+  <app-header />
+  <main class="main text-xl leading-8 px-8">
+    <app-image-with-text [imageWithTextData]="imageWithTextData1"/>
+    <br>
+    test
+  </main>
+  <router-outlet />
+  <app-footer />
+</div>

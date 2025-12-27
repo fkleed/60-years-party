@@ -6,28 +6,28 @@
     font-family: "Gajraj One";
     font-weight: normal;
     font-style: normal;
-    src: url("app/assets/fonts/GajrajOne-Regular.ttf") format("truetype");
+    src: url("assets/fonts/GajrajOne-Regular.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "RobotoSerif";
     font-weight: 400;
     font-style: normal;
-    src: url("app/assets/fonts/RobotoSerif-Regular.ttf") format("truetype");
+    src: url("assets/fonts/RobotoSerif-Regular.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "RobotoSerif";
     font-weight: 600;
     font-style: normal;
-    src: url("app/assets/fonts/RobotoSerif-SemiBold.ttf") format("truetype");
+    src: url("assets/fonts/RobotoSerif-SemiBold.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "RobotoSerif";
     font-weight: 700;
     font-style: normal;
-    src: url("app/assets/fonts/RobotoSerif-Bold.ttf") format("truetype");
+    src: url("assets/fonts/RobotoSerif-Bold.ttf") format("truetype");
 }
 
 @theme {

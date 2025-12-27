@@ -1,0 +1,17 @@
+<div class="image-with-text-container" [ngClass]="imageWithTextData().imagePosition">
+  <div class="image-container">
+    <img
+      [src]="imageWithTextData().image.src"
+      [alt]="imageWithTextData().image.alt"
+      [style]="imageWithTextData().image.style"
+      class="rounded-xl"
+      fill
+    />
+  </div>
+  <div class="text-container">
+    @if (imageWithTextData().heading) {
+    <h2>{{ imageWithTextData().heading }}</h2>
+    }
+    <ng-content />
+  </div>
+</div>
