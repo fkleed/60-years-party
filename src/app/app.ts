@@ -2,23 +2,31 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from "./layout/header/header";
 import { Footer } from "./layout/footer/footer";
-import { ImagePosition, ImageWithText, ImageWithTextData } from "./components/image-with-text/image-with-text";
+import { ImagePosition, ImageWithContent, ImageWithContentData } from "./components/image-with-text/image-with-content";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Footer, ImageWithText],
+  imports: [RouterOutlet, Header, Footer, ImageWithContent],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
 export class App {
 
-  protected readonly imageWithTextData1: ImageWithTextData = {
+  protected readonly imageWithContentDataGreeting: ImageWithContentData = {
     imagePosition: ImagePosition.LEFT,
     image: {
       src: '/assets/images/rainer.jpg',
-      alt: 'Test',
+      alt: 'Rainer and Alois',
       style: 'max-height: 600px',
     },
-    text: 'Ich lade euch herzlich ein, mit mir <span>60 Jahre Leben</span> zu feiern - mit Menschen, die mich begleitet, geprägt und bereichert haben.',
   };
+
+  protected readonly imageWithContentDataLocation: ImageWithContentData = {
+    imagePosition: ImagePosition.RIGHT,
+    image: {
+      src: '/assets/images/stollburg.jpg',
+      alt: 'Stollburg',
+      style: 'max-height: 400px',
+    }
+  }
 }

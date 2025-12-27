@@ -1,0 +1,14 @@
+<div class="image-with-content-container" [ngClass]="imageWithContentData().imagePosition">
+  <div class="image-container">
+    <img
+      [src]="imageWithContentData().image.src"
+      [alt]="imageWithContentData().image.alt"
+      [style]="imageWithContentData().image.style"
+      class="rounded-2xl"
+      fill
+    />
+  </div>
+  <div class="content-container">
+    <ng-content />
+  </div>
+</div>

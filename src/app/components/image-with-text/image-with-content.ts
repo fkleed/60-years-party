@@ -1,6 +1,5 @@
 import { Component, input, Input } from '@angular/core';
 import { NgClass, NgOptimizedImage } from '@angular/common';
-import { required } from '@angular/forms/signals';
 
 export enum ImagePosition {
   LEFT = 'left',
@@ -13,20 +12,18 @@ export type Image = {
   style?: string;
 };
 
-export type ImageWithTextData = {
+export type ImageWithContentData = {
   imagePosition: ImagePosition;
   image: Image;
-  heading?: string;
-  text: string;
 };
 
 @Component({
-  selector: 'app-image-with-text',
+  selector: 'app-image-with-content',
   imports: [NgClass],
-  templateUrl: './image-with-text.html',
-  styleUrl: './image-with-text.css',
+  templateUrl: './image-with-content.html',
+  styleUrl: './image-with-content.css',
 })
-export class ImageWithText {
+export class ImageWithContent {
 
-  imageWithTextData = input.required<ImageWithTextData>();
+  imageWithContentData = input.required<ImageWithContentData>();
 }

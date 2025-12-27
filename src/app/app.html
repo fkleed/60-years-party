@@ -1,9 +1,16 @@
 <div class="app-root">
   <app-header />
-  <main class="main text-xl leading-8 px-8">
-    <app-image-with-text [imageWithTextData]="imageWithTextData1"/>
-    <br>
-    test
+  <main class="main text-xl lg:text-2xl leading-8 lg:leading-10 px-8">
+    <app-image-with-content [imageWithContentData]="imageWithContentDataGreeting">
+      <p>Ich lade euch herzlich ein, mit mir <span class="font-bold">60 Jahre Leben</span> zu feiern - mit Menschen, die mich begleitet, geprägt und bereichert haben.</p>
+      <br>
+      <p>Lasst uns zusammen anstoßen auf das, was war, uns freuen auf das, was kommt und einfach einen großartigen Abend miteinander verbringen.</p>
+    </app-image-with-content>
+    <app-image-with-content [imageWithContentData]="imageWithContentDataLocation">
+      <h2 class="text-4xl lg:text-5xl font-semibold">Die Location</h2>
+      <br>
+      <p>Wir feiern gemeinsam am 23.05.2026 um 18 Uhr in Handthal auf der Stollburg, 97516 Oberschwarzach.</p>
+    </app-image-with-content>
   </main>
   <router-outlet />
   <app-footer />
