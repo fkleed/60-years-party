@@ -17,7 +17,10 @@ export class App {
     image: {
       src: '/assets/images/rainer.jpg',
       alt: 'Rainer and Alois',
-      style: 'max-height: 600px',
+      width: '1198',
+      height: '1499',
+      priority: true,
+      style: 'max-height: 600px; width: auto'
     },
   };
 
@@ -26,7 +29,10 @@ export class App {
     image: {
       src: '/assets/images/stollburg.jpg',
       alt: 'Stollburg',
-      style: 'max-height: 400px'
+      width: '1600',
+      height: '1200',
+      priority: false,
+      style: 'max-height: 400px; width: auto'
     }
   }
 }
