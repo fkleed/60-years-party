@@ -1,12 +1,16 @@
 <div class="image-with-content-container" [ngClass]="imageWithContentData().imagePosition">
   <div class="image-container">
-    <img
-      [src]="imageWithContentData().image.src"
-      [alt]="imageWithContentData().image.alt"
-      [style]="imageWithContentData().image.style"
-      class="rounded-2xl"
-      fill
-    />
+    @if (imageWithContentData().image.priority) {
+    <img [ngSrc]="imageWithContentData().image.src" [alt]="imageWithContentData().image.alt"
+      [width]="imageWithContentData().image.width" [height]="imageWithContentData().image.height" priority
+      [style]="imageWithContentData().image.style" class="rounded-2xl" />
+    }
+    @else {
+    <img [ngSrc]="imageWithContentData().image.src" [alt]="imageWithContentData().image.alt"
+      [width]="imageWithContentData().image.width" [height]="imageWithContentData().image.height"
+      [style]="imageWithContentData().image.style" class="rounded-2xl" />
+
+    }
   </div>
   <div class="content-container">
     <ng-content />

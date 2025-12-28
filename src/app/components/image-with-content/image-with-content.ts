@@ -9,7 +9,10 @@ export enum ImagePosition {
 export type Image = {
   src: string;
   alt: string;
-  style?: string;
+  width:string;
+  height: string;
+  priority: boolean;
+  style?: string
 };
 
 export type ImageWithContentData = {
@@ -19,7 +22,7 @@ export type ImageWithContentData = {
 
 @Component({
   selector: 'app-image-with-content',
-  imports: [NgClass],
+  imports: [NgClass, NgOptimizedImage],
   templateUrl: './image-with-content.html',
   styleUrl: './image-with-content.css',
 })
