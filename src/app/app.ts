@@ -1,12 +1,12 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { Header } from "./layout/header/header";
 import { Footer } from "./layout/footer/footer";
 import { ImagePosition, ImageWithContent, ImageWithContentData } from './components/image-with-content/image-with-content';
-
+import { Confetti } from "./components/confetti/confetti";
 
 @Component({
   selector: 'app-root',
-  imports: [Header, Footer, ImageWithContent],
+  imports: [Header, Footer, ImageWithContent, Confetti],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
