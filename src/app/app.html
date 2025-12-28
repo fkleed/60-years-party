@@ -1,17 +1,53 @@
 <div class="app-root">
   <app-header />
-  <main class="main text-xl lg:text-2xl leading-8 lg:leading-10 px-8">
-    <app-image-with-content [imageWithContentData]="imageWithContentDataGreeting">
-      <p>Ich lade euch herzlich ein, mit mir <span class="font-bold">60 Jahre Leben</span> zu feiern - mit Menschen, die mich begleitet, geprägt und bereichert haben.</p>
+  <main class="main text-xl lg:text-2xl leading-8 lg:leading-10 text-wrap">
+    <div class="content">
+      <app-image-with-content [imageWithContentData]="imageWithContentDataGreeting">
+        <p>Ich lade euch herzlich ein, mit mir <span class="font-bold">60 Jahre Leben</span> zu feiern - mit Menschen,
+          die
+          mich begleitet, geprägt und bereichert haben.</p>
+        <br>
+        <p>Lasst uns zusammen anstoßen auf das, was war, uns freuen auf das, was kommt und einfach einen großartigen
+          Abend
+          miteinander verbringen.</p>
+      </app-image-with-content>
+    </div>
+    <div class="content">
+      <app-image-with-content [imageWithContentData]="imageWithContentDataLocation" class="content">
+        <h2 class="text-4xl lg:text-5xl font-semibold">Die Location</h2>
+        <br>
+        <p>Wir feiern gemeinsam am 23.05.2026 um 18 Uhr in Handthal auf der Stollburg, 97516 Oberschwarzach.</p>
+      </app-image-with-content>
+    </div>
+    <div class="content">
+      <h2 class="text-4xl lg:text-5xl font-semibold">Parken</h2>
       <br>
-      <p>Lasst uns zusammen anstoßen auf das, was war, uns freuen auf das, was kommt und einfach einen großartigen Abend miteinander verbringen.</p>
-    </app-image-with-content>
-    <app-image-with-content [imageWithContentData]="imageWithContentDataLocation">
-      <h2 class="text-4xl lg:text-5xl font-semibold">Die Location</h2>
+      <p>Parkplätze gibt es circa 400 m unterhalb der Stollburg.Diese sind auch für Wohmobile geeignet.</p>
       <br>
-      <p>Wir feiern gemeinsam am 23.05.2026 um 18 Uhr in Handthal auf der Stollburg, 97516 Oberschwarzach.</p>
-    </app-image-with-content>
+      <p>Wer mit dem Wohnmobil übernachten möchte, kann sich über <a href="https://www.alpacacamping.de" target="_blank"
+          rel="noopener noreferrer">https://www.alpacacamping.de</a> Stellplätze reservieren.</p>
+    </div>
+    <div class="content">
+      <h2 class="text-4xl lg:text-5xl font-semibold">Übernachtungsmöglichkeiten</h2>
+      <br>
+      <p>Für alle, die übernachten wollen - es gibt Übernachtungsmöglichkeiten in Handthal, Gerolzhofen oder
+        Prichsenstadt (beides circa 10 km entfernt).</p>
+      <br>
+      <h3>Handthal</h3>
+      <ul class="list-disc">
+        <li class="ml-10 mt-2">Forellenhof</li>
+      </ul>
+      <h3 class="mt-4">Gerolzhofen</h3>
+      <ul class="list-disc">
+        <li class="ml-10 mt-2">Tor zum Steigerwald</li>
+        <li class="ml-10 mt-2">Hotel Weinstube am Markt</li>
+
+      </ul>
+      <h3 class="mt-4">Prichsenstadt</h3>
+      <ul class="list-disc">
+        <li class="ml-10 mt-2">Freihof</li>
+      </ul>
+    </div>
   </main>
-  <router-outlet />
   <app-footer />
 </div>

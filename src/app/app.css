@@ -11,3 +11,14 @@
     width: 100%;
     max-width: 1600px;
 }
+
+.content {
+    padding: 2rem;
+}
+
+@media (min-width: 80rem) {
+    .content {
+        padding: 2rem;
+        margin-top: 2rem;
+    }
+}
