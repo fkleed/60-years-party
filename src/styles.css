@@ -55,3 +55,7 @@ a:focus {
     text-decoration: none;
     color: #E37434;
 }
+
+input {
+  appearance: none;
+}
