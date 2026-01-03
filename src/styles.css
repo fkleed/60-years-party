@@ -38,7 +38,8 @@
     --color-secondary: #E37434;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     font-family: var(--font-roboto-serif);
@@ -54,4 +55,18 @@ a:active,
 a:focus {
     text-decoration: none;
     color: #E37434;
+}
+
+input {
+    appearance: none;
+}
+
+.success-snackbar {
+    background-color: theme('colors.green.500');
+    color: white;
+}
+
+.error-snackbar {
+    background-color: theme('colors.red.500');
+    color: white;
 }

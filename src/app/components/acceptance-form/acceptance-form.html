@@ -1,0 +1,54 @@
+<h2 class="text-4xl lg:text-5xl font-semibold">Zusage</h2>
+<br>
+<p>Es wäre super, wenn ihr bis zum {{ acceptanceDeadline | date:'dd.MM.yyyy' }} über folgendes Formular zusagt.</p>
+<br>
+<form [formGroup]="acceptanceForm" class="flex flex-col" (ngSubmit)="onSubmit()">
+    <label for="name">Name: </label>
+    <input id="name" type="text" formControlName="name"
+        class="mt-2 rounded-md border border-gray-300 p-2 focus:outline focus:outline-2 focus:outline-gray-500 max-w-lg" />
+
+    @if (nameControl != null && nameControl.invalid && (nameControl.dirty || nameControl.touched)) {
+    <span class="text-base text-red-500">*Name wird benötigt</span>
+    }
+
+    <label for="numberOfPersons" class="mt-8">Anzahl der Personen:</label>
+    <input id="numberOfPersons" type="number" formControlName="numberOfPersons"
+        class="mt-2 rounded-md border border-gray-300 p-2 focus:outline focus:outline-2 focus:outline-gray-500 max-w-lg" />
+
+    @if (numberOfPersonsControl != null && numberOfPersonsControl.invalid && (numberOfPersonsControl.dirty ||
+    numberOfPersonsControl.touched)) {
+
+    @if(numberOfPersonsControl.hasError('min')) {
+    <span class="text-base text-red-500">*Die Anzahl der Personen muss mindestens 1 betragen.</span>
+
+    }
+
+    @if(numberOfPersonsControl.hasError('max')) {
+    <span class="text-base text-red-500">*Die Anzahl der Personen darf höchstens 5 betragen.</span>
+    }
+
+    @if(numberOfPersonsControl.hasError('required')) {
+    <span class="text-base text-red-500">*Die Anzahl der Personen wird benötigt.</span>
+    }
+    }
+
+    <button type="submit" [disabled]="isSaving() || this.acceptanceForm.invalid" class="
+    mt-8 w-fit
+    cursor-pointer
+    inline-flex items-center justify-center
+    rounded-2xl p-4
+    border-2 border-secondary
+    font-semibold
+    transition-colors duration-250
+
+    hover:bg-secondary
+    active:bg-secondary
+    focus-visible:bg-secondary
+
+    disabled:cursor-not-allowed
+    disabled:bg-inherit
+    disabled:border-gray-300
+  ">
+        Ich bin dabei
+    </button>
+</form>

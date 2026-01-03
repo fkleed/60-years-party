@@ -3,10 +3,11 @@ import { Header } from "./layout/header/header";
 import { Footer } from "./layout/footer/footer";
 import { ImagePosition, ImageWithContent, ImageWithContentData } from './components/image-with-content/image-with-content';
 import { Confetti } from "./components/confetti/confetti";
+import { AcceptanceForm } from "./components/acceptance-form/acceptance-form";
 
 @Component({
   selector: 'app-root',
-  imports: [Header, Footer, ImageWithContent, Confetti],
+  imports: [Header, Footer, ImageWithContent, Confetti, AcceptanceForm],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
